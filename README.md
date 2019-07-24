@@ -6,7 +6,6 @@ Docker base repository for Node projects with connection to MongoDB
     export MONGO_ROOT_USERNAME=myapp
     export MONGO_ROOT_PASSWORD=myappPass123
     export MONGO_DATABASE=myapp
-    export MONGO_DATA=mongo-data
     export MONGO_EXT_PORT=27017
     export APP_EXT_PORT=3000
 
