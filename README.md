@@ -1,5 +1,6 @@
 # docker-base-node-mongo
-Docker base repository for Node projects with connection to MongoDB
+Docker base repository for Node projects with connection to MongoDB.
+
 
 1.- Add your App Node Code to "apps" path.
 
