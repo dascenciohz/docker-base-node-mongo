@@ -13,7 +13,6 @@ Docker base repository for Node projects with connection to MongoDB
     MONGO_INIT_SCRIPT=./configs/mongo/scripts
     APP_EXT_PORT=3000
 
-
     Alternatively you can create an .env file in the same path of the docker-compose.yml file with the variables named above.
 
 
