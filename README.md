@@ -22,4 +22,4 @@ Docker base repository for Node projects with connection to MongoDB
     docker-compose -f "docker-compose.yml" up -d --build
 
 
-NOTE: If the app retur error connection to mongodb, restart container to resolve problem.
+NOTE: If the app return error connection to mongodb, restart container to resolve problem.
