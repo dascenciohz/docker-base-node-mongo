@@ -1,7 +1,6 @@
 # docker-base-node-mongo
 Docker base repository for Node projects with connection to MongoDB.
 
-
 1.- Add your App Node Code to "apps" path.
 
 2.- Set envaironment variables.
@@ -9,12 +8,11 @@ Docker base repository for Node projects with connection to MongoDB.
     MONGO_ROOT_USERNAME=rootapp
     MONGO_ROOT_PASSWORD=rootPass123
     MONGO_DATABASE=myapp
-    MONGO_DATA=mongo-data
     MONGO_EXT_PORT=27017
     MONGO_INIT_SCRIPT=./configs/mongo/scripts
     APP_EXT_PORT=3000
 
-    Alternatively you can create an .env file in the same path of the docker-compose.yml file with the variables named above.
+    Alternatively you can create an .env file in the same path of the docker-compose.yml with the variables named above.
 
 
 3.- Edit mongo init script to set user and password app.
