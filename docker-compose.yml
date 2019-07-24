@@ -1,0 +1,37 @@
+version: '3.7'
+services:
+  mongo:
+    image: mongo:4.0-xenial
+    restart: always
+    command: --auth
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_DATABASE}
+    volumes:
+      - mongo-data:/data/db
+      - ${MONGO_INIT_SCRIPT}:/docker-entrypoint-initdb.d
+    networks: 
+      - myapp
+    ports:
+      - ${MONGO_EXT_PORT}:27017
+  app:
+    build: 
+      context: apps/
+      dockerfile: Dockerfile
+    networks:
+      - myapp
+    ports:
+      - ${APP_EXT_PORT}:3000
+    depends_on:
+      - mongo
+    links: 
+      - mongo
+
+networks:
+  myapp:
+    name: myapp
+    driver:  bridge
+
+volumes:
+  mongo-data:
