@@ -3,11 +3,13 @@ Docker base repository for Node projects with connection to MongoDB
 
 1.- Set envaironment variables.
 
-    export MONGO_ROOT_USERNAME=myapp
-    export MONGO_ROOT_PASSWORD=myappPass123
-    export MONGO_DATABASE=myapp
-    export MONGO_EXT_PORT=27017
-    export APP_EXT_PORT=3000
+    MONGO_ROOT_USERNAME=rootapp
+    MONGO_ROOT_PASSWORD=rootPass123
+    MONGO_DATABASE=myapp
+    MONGO_DATA=mongo-data
+    MONGO_EXT_PORT=27017
+    MONGO_INIT_SCRIPT=./configs/mongo/scripts
+    APP_EXT_PORT=3000
 
     Alternatively you can create an .env file in the same path of the docker-compose.yml file with the variables named above.
 
