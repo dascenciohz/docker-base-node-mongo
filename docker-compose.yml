@@ -16,9 +16,7 @@ services:
     ports:
       - ${MONGO_EXT_PORT}:27017
   app:
-    build: 
-      context: apps/
-      dockerfile: Dockerfile
+    build: .
     networks:
       - myapp
     ports:
