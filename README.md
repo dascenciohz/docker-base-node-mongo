@@ -1,7 +1,12 @@
 # docker-base-node-mongo
 Docker base repository for Node projects with connection to MongoDB.
 
-1.- Add your App Node Code to "apps" path.
+1.- Add your App Node Code to "apps" path. For Example:
+
+    * GIT
+    git clone git@myproyect.git apps
+    * COPY
+    cp -r /path/my/poroject apps/
 
 2.- Set envaironment variables.
 
