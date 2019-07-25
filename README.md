@@ -36,6 +36,8 @@ Docker base repository for Node projects with connection to MongoDB.
 6.- (Optional) Remove Mongo data volume.
 
     docker volume rm mongo-data 
+
+NOTE: If the app return error connection to Mongo, restart container to fix problem.
     
 # Start only Node Project without Mongo Server.
 
@@ -44,6 +46,3 @@ Docker base repository for Node projects with connection to MongoDB.
 2.- Build and start up your app.
 
     docker-compose -f "docker-compose.yml" up -d --build myapp
-
-
-NOTE: If the app return error connection to Mongo, restart container to fix problem.
