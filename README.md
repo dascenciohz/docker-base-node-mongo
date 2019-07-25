@@ -1,4 +1,4 @@
-# docker-base-node-mongo
+# Docker base to Node Project with Mongo Server.
 Docker base repository for Node projects with connection to MongoDB.
 
 1.- Add your App Node Code to "apps" path. For Example:
@@ -17,7 +17,7 @@ Docker base repository for Node projects with connection to MongoDB.
     MONGO_INIT_SCRIPT=./configs/mongo/scripts
     APP_EXT_PORT=3000
 
-    Alternatively you can create an .env file in the same path of the docker-compose.yml with the variables named above.
+    * Alternatively you can create an .env file in the same path of the docker-compose.yml with the variables named above.
 
 
 3.- Edit mongo init script to set user and password app.
@@ -36,6 +36,14 @@ Docker base repository for Node projects with connection to MongoDB.
 6.- (Optional) Remove Mongo data volume.
 
     docker volume rm mongo-data 
+    
+# Start only Node Project without Mongo Server.
+
+1.- Add your App Node Code into "apps" folder.
+
+2.- Build and start up your app.
+
+    docker-compose -f "docker-compose.yml" up -d --build myapp
 
 
 NOTE: If the app return error connection to Mongo, restart container to fix problem.
