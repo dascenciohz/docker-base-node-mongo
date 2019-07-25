@@ -29,5 +29,13 @@ Docker base repository for Node projects with connection to MongoDB.
 
     docker-compose -f "docker-compose.yml" up -d --build
 
+5.- Tear down service stack.
 
-NOTE: If the app return error connection to mongodb, restart container to resolve problem.
+    docker-compose down
+
+6.- (Optional) Remove Mongo data volume.
+
+    docker volume rm mongo-data 
+
+
+NOTE: If the app return error connection to Mongo, restart container to fix problem.
